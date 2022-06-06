@@ -23,5 +23,4 @@ def openFile(name,format):
     nameFormat = f'{name}.{format}'
     file = open(nameFormat,'r+')
     return file
-
-puts('teste')
+    
