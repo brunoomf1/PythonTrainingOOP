@@ -10,8 +10,17 @@ count = len(names)
 
 for c in range(count):
     print(f'{names[c]}, ${salaries[c]}')
-    
+
+
+##Class name begin with capital letter
     class Employee:
-        def __init__(self,name,salary):
+        def __init__(self,name,salary): #dunder methods __method__, dunder init is called when the object is created
+            #self is a reference to the object itself,the way of the class to reference a especific object
+            #is through the parameter "self"
             self.name = name
             self.salay = salary
+
+e = Employee ("vera",200)
+
+
+            
