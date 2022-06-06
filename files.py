@@ -4,24 +4,25 @@ def saveFile(file):
     file.close()
 
 
-def createFile(name = 'file',format = 'txt'):
-    nameFormat = f'{name}.{format}'
+def createFile(name = 'file',formato = 'txt'):
+    nameformato = f'{name}.{formato}'
 
 
-    if exists(nameFormat) == False:
-        file = open(nameFormat,'x')
+    if exists(nameformato) == False:
+        file = open(nameformato,'x')
         saveFile(file)
 
-    elif exists(nameFormat) == True:
+    elif exists(nameformato) == True:
         res = input('arquivo ja esxiste, deseja substituir? (y/n)')
         if res == "y":
-            file = open(nameFormat,'w')
+            file = open(nameformato,'w')
             saveFile(file)
 
 
-def openFile(name,format):
-    nameFormat = f'{name}.{format}'
-    file = open(nameFormat,'r+')
+def openFile(name,formato):
+    nameformato = f'{name}.{formato}'
+    if exists(nameformato) == False:
+        createFile(name,formato)
+    file = open(nameformato,'r+')
     return file
-    
 
