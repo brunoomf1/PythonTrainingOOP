@@ -26,3 +26,5 @@ def openFile(name,formato):
     file = open(nameformato,'r+')
     return file
 
+
+file = open('salary','csv')
