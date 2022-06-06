@@ -1,4 +1,4 @@
-from os.path import exists 
+from os.path import exists
 
 def saveFile(file):
     file.close()
@@ -6,8 +6,8 @@ def saveFile(file):
 
 def createFile(name = 'file',format = 'txt'):
     nameFormat = f'{name}.{format}'
-   
-   
+
+
     if exists(nameFormat) == False:
         file = open(nameFormat,'x')
         save_file(file)
@@ -23,3 +23,5 @@ def openFile(name,format):
     nameFormat = f'{name}.{format}'
     file = open(nameFormat,'r+')
     return file
+
+puts('teste')
