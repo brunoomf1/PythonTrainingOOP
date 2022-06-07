@@ -8,6 +8,9 @@ class Employee:
         self.last_name = splited_name[1]
         self.salary = salary
         
+    def get_full_name(self):
+       return f'{self.first_name} {self.last_name}'
+        
 class Mechanic(Employee):
     job_title = "Mechanic"
     
