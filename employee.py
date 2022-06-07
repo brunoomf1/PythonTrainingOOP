@@ -7,7 +7,7 @@ class Employee:
         self.first_name = splited_name[0]
         self.last_name = splited_name[1]
         self.salary = salary
-        self.shift = shift
+        self.title_shift = shift
         
     def get_full_name(self):
        return f'{self.first_name} {self.last_name}'

@@ -1,6 +1,5 @@
 
 import employee as em
-from shift import Shift
 
 
 class Reporter:
@@ -18,7 +17,6 @@ class AccoutingReport(Reporter):
         
         print('=============================') 
         print('                             ')
-
 
 class StaffingReport(Reporter):
     
@@ -41,7 +39,7 @@ class ScheduleReport(Reporter):
         
         for e in self.emp_list:
             print(f'    {em.Employee.get_full_name(e)}      ')
-            print(f'{e.Shift.get_shift_info()}')
+            print(f'{e.title_shift.get_shift_info()}') #"shift"
 
         
         print('===============================') 
