@@ -5,10 +5,13 @@ from report import StaffingReport
 from report import ScheduleReport
 from shift import MorningShift
 from shift import AfternoonShift
+from files import OpeningFile
 
 # OBJECT IS A GROUP OF INFORMATION THAT BELONG TOGETHER
 
 ##Class name begin with capital letter
+
+file = OpeningFile.open_file()
 
 listOfEmployee = [employee.Manager("Vera Schmidt",2000,MorningShift()),
                   employee.Attendant("Chuck Norris",1800,MorningShift()),
@@ -29,3 +32,4 @@ report = [
 
 for r in report:
     r.print_report()
+    file.write(r.print_report())
